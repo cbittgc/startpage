@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WELCOME</title>
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+
+        m = checkTime(m);
+        s = checkTime(s);
+
+        document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+    </script>
+    <style>
+      body {
+        background-image: url("background.png");
+      }
+      div {
+        text-align: center;
+        border: 5px solid rgba(245, 147, 189, 0.3);
+      }
+      section {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body onload="startTime()">
+    <div class="clock-container">
+      <h1 id="clock"></h1>
+    </div>
+    <br />
+    <div class="search-box">
+      <input
+        class="search-txt"
+        type="text"
+        name="g-search-bar"
+        placeholder="Discover"
+      />
+      <a class="search-btn" href="#"></a>
+    </div>
+    <br />
+    <div class="link-containers">
+      <section name="social-media" class="link-box">
+        <h4>social media</h4>
+        <ul>
+          <li>
+            <a href="www.twitter.com">Twitter</a>
+          </li>
+          <li>
+            <a href="www.facebook.com">Facebook</a>
+          </li>
+          <li>
+            <a href="www.instagram.com">Instagram</a>
+          </li>
+        </ul>
+      </section>
+      <section name="programming" class="link-box">
+        <h4>/prog/</h4>
+        <ul>
+          <li>
+            <a href="https://w3schools.com/">W3Schools</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/">MDN</a>
+          </li>
+          <li>
+            <a href="www.edabit.com">Edabit</a>
+          </li>
+          <li>
+            <a href="https://css-tricks.com/">CSS Tricks</a>
+          </li>
+          <li>
+            <a href="https://github.com/">GitHub</a>
+          </li>
+        </ul>
+      </section>
+      <section name="entertainment" class="link-box">
+        <h4>entertainment</h4>
+        <ul>
+          <li>
+            <a href="https://youtube.com/">YouTube</a>
+          </li>
+          <li>
+            <a href="https://netflix.com/">Netflix</a>
+          </li>
+          <li>
+            <a href="https://www.primevideo.com/">Prime Video</a>
+          </li>
+          <li>
+            <a href="https://twitch.tv/">Twitch</a>
+          </li>
+        </ul>
+      </section>
+      <section name="foruns" class="link-box">
+        <h4>foruns</h4>
+        <ul>
+          <li>
+            <a href="https://4chan.org/">4Chan</a>
+          </li>
+          <li>
+            <a href="https://lainchan.org/">LainChan</a>
+          </li>
+          <li>
+            <a href="https://reddit.com/">Reddit</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <h6>startpage made by cbittgc</h6>
+  </body>
+</html>
